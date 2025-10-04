@@ -72,9 +72,9 @@ function api_list_servers()
     if raw == "" then return json({ok=false, error="empty_result"}) end
 
     local servers = {}
-    local dk = require("dkjson")
-    local obj, _, err = dk.decode(raw)
-    if not obj then return json({ok=false, error="json_decode_failed:"..tostring(err)}) end
+    local jsonc = require "luci.jsonc"
+    local obj, _, err = jsonc.parse(raw)
+    if not obj then return json({ok=false, error="json_parse_failed"..tostring(err)}) end
 
     if b == "ookla" then
         local list = obj.servers or obj or {}
