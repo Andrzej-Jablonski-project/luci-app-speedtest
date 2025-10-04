@@ -1,16 +1,11 @@
-# This is free software, licensed under the Apache License, Version 2.0
-#
-# Copyright (C) 2024 Hilman Maulana <hilman0.0maulana@gmail.com>
-
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=LuCI for speedtestcpp
-LUCI_DEPENDS:=+speedtestcpp +libuci-lua +luci-lib-jsonc
-LUCI_DESCRIPTION:=LuCI support for speedtestcpp
-
-PKG_MAINTAINER:=Hilman Maulana <hilman0.0maulana@gmail.com>
-PKG_VERSION:=2.2
+LUCI_TITLE:=LuCI app: Speedtest (server selection)
+LUCI_DESCRIPTION:=LuCI interface for internet speed tests with server selection (Ookla/LibreSpeed/speedtestcpp)
+LUCI_DEPENDS:=+luci-base +luci-compat +libuci-lua +luci-lib-jsonc
+LUCI_PKGARCH:=all
 PKG_LICENSE:=Apache-2.0
+PKG_MAINTAINER:=Andrzej <andrzej@example.com>
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
