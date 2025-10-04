@@ -1,2 +1,8 @@
-
-config speedtest 'schedule'
+config speedtest 'general'
+        option backend 'speedtestcpp'   # ookla | librespeed | speedtestcpp
+        option server_id ''             # np. 12345 (ID serwera z listy)
+        option server_name ''           # pole opisowe (UI)
+        option timeout '60'             # maksymalny czas testu (s)
+        option bin_ookla 'speedtest'    # ścieżka do Ookla CLI
+        option bin_librespeed 'librespeed-cli' # ścieżka do LibreSpeed CLI
+        option bin_speedtestcpp 'speedtestpp'  # nazwa/ścieżka do speedtestcpp

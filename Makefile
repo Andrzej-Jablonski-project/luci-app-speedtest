@@ -5,7 +5,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI for speedtestcpp
-LUCI_DEPENDS:=+speedtestcpp
+LUCI_DEPENDS:=+speedtestcpp +libuci-lua +luci-lib-jsonc +lua-dkjson
 LUCI_DESCRIPTION:=LuCI support for speedtestcpp
 
 PKG_MAINTAINER:=Hilman Maulana <hilman0.0maulana@gmail.com>
